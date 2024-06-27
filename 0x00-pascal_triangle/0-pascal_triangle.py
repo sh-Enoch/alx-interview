@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Pascals Triangle."""
 
+
 def pascal_triangle(n):
     """Define pascal triangle."""
     if n <= 0:
