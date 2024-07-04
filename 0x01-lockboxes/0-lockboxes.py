@@ -4,16 +4,13 @@
 
 def canUnlockAll(boxes):
     """Unlock boxes."""
-    if type(boxes) is not list:
+    if not isinstance(boxes, list) or len(boxes) == 0:
         return False
-    elif (len(boxes)) == 0:
-        return False
-    for j in range(i, len(boxes) - 1):
-        boxes_checked = False
-        for idx in range(len(boxes)):
-            boxes_checked = k in boxes[idx] and k != idx
-            if boxes_checked:
-                break
-            if boxes_checked is False:
-                return boxes_checked
-    return True
+
+    unlocked_boxes = set([0])
+
+    for box_idx, box in enumerate(boxes):
+        if box_idx in unlocked_boxes:
+            unlocked_boxes.update(box)
+
+    return len(unlocked_boxes) == len(boxes)
