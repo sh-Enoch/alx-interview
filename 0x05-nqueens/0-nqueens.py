@@ -12,11 +12,12 @@ pos = None
 
 """Possible positions on the chessboard."""
 
+
 def get_input():
     """Retrieve and validate args."""
     global n
     n = 0
-    if len(sys.argv)!= 2:
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
     try:
@@ -29,11 +30,13 @@ def get_input():
         sys.exit(1)
     return n
 
+
 def is_attacking(pos0, pos1):
-    """check positionsof two queens are in attcaking."""
+    """Check positionsof two queens are in attcaking."""
     if (pos[0] == pos1[0]) or (pos0[1] == pos[1]):
         return True
     return abs(pos0[0] - pos1[0]) == abs(pos0[1] - pos1[1])
+
 
 def group_exists(group):
     """
