@@ -14,7 +14,7 @@ def makeChange(coins, total):
     while rem > 0:
         if index >= y:
             return - 1
-        if rem - sortef_coins[index] >= 0:
+        if rem - sorted_coins[index] >= 0:
             rem -= sorted_coins[index]
             coins_count += 1
         else:
