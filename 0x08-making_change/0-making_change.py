@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""0-making_change.py"""
+"""0-making_change.py."""
 
 
 def makeChange(coins, total):
-    """Determine the fewest number of coins needed to meet a given total amount."""
+    """Determine the few number of coins to meet a given total amount."""
     if total <= 0:
         return 0
     rem = total
@@ -14,7 +14,7 @@ def makeChange(coins, total):
     while rem > 0:
         if index >= y:
             return - 1
-        if rem - sortef_coins[index] >=0:
+        if rem - sortef_coins[index] >= 0:
             rem -= sorted_coins[index]
             coins_count += 1
         else:
